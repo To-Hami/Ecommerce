@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('index',[FrontendController::class,'index'])->name('index');
+Route::get('cart',[FrontendController::class,'cart'])->name('cart');
+Route::get('checkout',[FrontendController::class,'checkout'])->name('checkout');
+Route::get('detail',[FrontendController::class,'detail'])->name('detail');
+Route::get('shop',[FrontendController::class,'shop'])->name('shop');
 
 Auth::routes();
 
