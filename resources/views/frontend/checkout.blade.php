@@ -30,7 +30,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="cart.blade.php">Add to cart</a></div>
+                      <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="{{route('cart')}}">Add to cart</a></div>
                     </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
                   </div>
                 </div>
@@ -50,8 +50,8 @@
               <div class="col-lg-6 text-lg-end">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb justify-content-lg-end mb-0 px-0 bg-light">
-                    <li class="breadcrumb-item"><a class="text-dark" href="index.blade.php">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-dark" href="cart.blade.php">Cart</a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="{{route('index')}}">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="{{route('cart')}}">Cart</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Checkout</li>
                   </ol>
                 </nav>

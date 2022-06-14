@@ -1,7 +1,15 @@
 <?php
 
 
-/************************* Auth ***************************/
+/************************************* Auth ***************************/
 
 /****************  composer require laravel/ui
-/****************  php artisan ui bootstrap --auth  */
+/****************  php artisan ui bootstrap --auth  ****/
+
+/**************************************  request link **********************
+ *
+ *  {{request()->routeIs('detail')?' bg-light':null}}****/
+
+
+
+

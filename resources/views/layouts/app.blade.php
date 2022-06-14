@@ -26,36 +26,42 @@
     <link rel="stylesheet" href="{{   asset('frontend/vendor/glightbox/css/glightbox.min.css')}}">
     <link rel="stylesheet" href="{{   asset('frontend/vendor/nouislider/nouislider.min.css')}}">
     <link rel="stylesheet" href="{{   asset('frontend/vendor/choices.js/public/assets/styles/choices.min.css')}}">
-    <link rel="stylesheet" href="{{   asset('frontend/css/style.default.css')}}">
+    <link rel="stylesheet" href="{{   asset('frontend/vendor/swiper/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{   asset('frontend/vendor/owl/animate.css')}}">
+    <link rel="stylesheet" href="{{   asset('frontend/vendor/owl/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+
+    <link rel="stylesheet" href="{{asset('frontend/css/style.default.css')}}" id="theme-stylesheet">
     <link rel="stylesheet" href="{{   asset('frontend/css/custom.css')}}">
     <link rel="shortcut icon" href="{{asset('frontend/img/favicon.png')}}">
 
 
 </head>
 <body>
-<div id="app"class="page-holder">
+<div class="page-holder {{request()->routeIs('detail')?' bg-light':null}}">
 
     <header class="header bg-white">
         <div class="container px-lg-3">
-            <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.blade.php"><span class="fw-bold text-uppercase text-dark">Boutique</span></a>
+            <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="{{route('index')}}"><span class="fw-bold text-uppercase text-dark">Boutique</span></a>
                 <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <!-- Link--><a class="nav-link active" href="index.blade.php">Home</a>
+                            <!-- Link--><a class="nav-link active" href="{{route('index')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <!-- Link--><a class="nav-link" href="shop.blade.php">Shop</a>
+                            <!-- Link--><a class="nav-link" href="{{route('shop')}}">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <!-- Link--><a class="nav-link" href="detail.blade.php">Product detail</a>
+                            <!-- Link--><a class="nav-link" href="{{route('detail')}}">Product detail</a>
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                            <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown"><a class="dropdown-item border-0 transition-link" href="index.blade.php">Homepage</a><a class="dropdown-item border-0 transition-link" href="shop.blade.php">Category</a><a class="dropdown-item border-0 transition-link" href="detail.blade.php">Product detail</a><a class="dropdown-item border-0 transition-link" href="cart.blade.php">Shopping cart</a><a class="dropdown-item border-0 transition-link" href="checkout.blade.php">Checkout</a></div>
+                            <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown"><a class="dropdown-item border-0 transition-link" href="{{route('index')}}">Homepage</a><a class="dropdown-item border-0 transition-link" href="{{route('shop')}}">Category</a><a class="dropdown-item border-0 transition-link" href="{{route('detail')}}">Product detail</a><a class="dropdown-item border-0 transition-link" href="{{route('cart')}}">Shopping cart</a><a class="dropdown-item border-0 transition-link" href="{{route('checkout')}}">Checkout</a></div>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="cart.blade.php"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('cart')}}"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li>
                         <li class="nav-item"><a class="nav-link" href="#!"> <i class="far fa-heart me-1"></i><small class="text-gray fw-normal"> (0)</small></a></li>
                         <li class="nav-item"><a class="nav-link" href="#!"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
                     </ul>
@@ -121,7 +127,7 @@
             <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="modal-body p-0">
                 <div class="row align-items-stretch">
-                    <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" style="background: url({{asset('frontend/img/product-5.jpg')}})" href="img/product-5.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-2.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
+                    <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" style="background: url({{asset('frontend/img/product-5.jpg')}})" href="{{asset('frontend/img/product-5.jpg')}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="{{asset('frontend/img/product-5-alt-1.jpg')}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="{{asset('frontend/img/product-5-alt-2.jpg')}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
                     <div class="col-lg-6">
                         <div class="p-4 my-md-4">
                             <ul class="list-inline mb-2">
@@ -144,7 +150,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="cart.blade.php">Add to cart</a></div>
+                                <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="{{route('cart')}}">Add to cart</a></div>
                             </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
                         </div>
                     </div>
@@ -153,13 +159,45 @@
         </div>
     </div>
 </div>
+<script src="{{   asset('frontend/js/jquery.js')}}"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js">
+<script src="{{   asset('frontend/vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{   asset('frontend/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{   asset('frontend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{   asset('frontend/vendor/glightbox/js/glightbox.min.js')}}"></script>
 <script src="{{   asset('frontend/vendor/nouislider/nouislider.min.js')}}"></script>
 <script src="{{   asset('frontend/vendor/swiper/swiper-bundle.min.js')}}"></script>
 <script src="{{   asset('frontend/vendor/choices.js/public/assets/scripts/choices.min.js')}}"></script>
+<script src="{{   asset('frontend/vendor/owl/owl.carousel.min.js')}}"></script>
+
 <script src="{{   asset('frontend/js/front.js')}}"></script>
 <script src="{{  asset('js/app.js') }}"></script>
+<script>
+    var range = document.getElementById('range');
+    noUiSlider.create(range, {
+        range: {
+            'min': 0,
+            'max': 2000
+        },
+        step: 5,
+        start: [100, 1000],
+        margin: 300,
+        connect: true,
+        direction: 'ltr',
+        orientation: 'horizontal',
+        behaviour: 'tap-drag',
+        tooltips: true,
+        format: {
+            to: function ( value ) {
+                return '$' + value;
+            },
+            from: function ( value ) {
+                return value.replace('', '');
+            }
+        }
+    });
+
+</script>
 <script>
     // ------------------------------------------------------- //
     //   Inject SVG Sprite -

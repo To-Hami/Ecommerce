@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	/* ===============================================================
 		PRODUCT DETAIL SLIDER
-	=============================================================== */
-	var productSliderThumbs = new Swiper('.product-slider-thumbs', {
+	=============================f================================== */
+        var productSliderThumbs = new Swiper('.product-slider-thumbs', {
 		direction: 'horizontal',
 		slidesPerView: 5,
 		spaceBetween: 10,
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-	var productsSlider = new Swiper('.product-slider', {
+	var productsSlider = new Swiper('.swiper-slide', {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		thumbs: {

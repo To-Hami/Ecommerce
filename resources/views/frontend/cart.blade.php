@@ -7,7 +7,7 @@
             <div class="modal-body p-0">
               <div class="row align-items-stretch">
                 <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" style="background: url({{asset('frontend/img/product-5.jpg')}})" href="{{asset('frontend/img/product-5.jpg')}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="{{asset('frontend/img/product-5-alt-1.jpg')}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="{{asset('frontend/img/product-5-alt-2.jpg')}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
-                <div class="col-lg-6">
+                <div class="col-lg-6">`
                   <div class="p-4 my-md-4">
                     <ul class="list-inline mb-2">
                       <li class="list-inline-item m-0"><i class="fas fa-star small text-warning"></i></li>
@@ -29,7 +29,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="cart.blade.php">Add to cart</a></div>
+                      <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="{{route('cart')}}">Add to cart</a></div>
                     </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
                   </div>
                 </div>
@@ -49,7 +49,7 @@
               <div class="col-lg-6 text-lg-end">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb justify-content-lg-end mb-0 px-0 bg-light">
-                    <li class="breadcrumb-item"><a class="text-dark" href="index.blade.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="{{route('index')}}">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Cart</li>
                   </ol>
                 </nav>
@@ -76,8 +76,8 @@
                   <tbody class="border-0">
                     <tr>
                       <th class="ps-0 py-3 border-light" scope="row">
-                        <div class="d-flex align-items-center"><a class="reset-anchor d-block animsition-link" href="detail.blade.php"><img src="{{asset('frontend/img/product-detail-3.jpg')}}" alt="..." width="70"/></a>
-                          <div class="ms-3"><strong class="h6"><a class="reset-anchor animsition-link" href="detail.blade.php">Red digital smartwatch</a></strong></div>
+                        <div class="d-flex align-items-center"><a class="reset-anchor d-block animsition-link" href="{{route('detail')}}"><img src="{{asset('frontend/img/product-detail-3.jpg')}}" alt="..." width="70"/></a>
+                          <div class="ms-3"><strong class="h6"><a class="reset-anchor animsition-link" href="{{route('detail')}}">Red digital smartwatch</a></strong></div>
                         </div>
                       </th>
                       <td class="p-3 align-middle border-light">
@@ -99,8 +99,8 @@
                     </tr>
                     <tr>
                       <th class="ps-0 py-3 border-0" scope="row">
-                        <div class="d-flex align-items-center"><a class="reset-anchor d-block animsition-link" href="detail.blade.php"><img src="{{asset('frontend/img/product-detail-2.jpg')}}" alt="..." width="70"/></a>
-                          <div class="ms-3"><strong class="h6"><a class="reset-anchor animsition-link" href="detail.blade.php">Apple watch</a></strong></div>
+                        <div class="d-flex align-items-center"><a class="reset-anchor d-block animsition-link" href="{{route('detail')}}"><img src="{{asset('frontend/img/product-detail-2.jpg')}}" alt="..." width="70"/></a>
+                          <div class="ms-3"><strong class="h6"><a class="reset-anchor animsition-link" href="{{route('detail')}}">Apple watch</a></strong></div>
                         </div>
                       </th>
                       <td class="p-3 align-middle border-0">
@@ -126,8 +126,8 @@
               <!-- CART NAV-->
               <div class="bg-light px-4 py-3">
                 <div class="row align-items-center text-center">
-                  <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-link p-0 text-dark btn-sm" href="shop.blade.php"><i class="fas fa-long-arrow-alt-left me-2"> </i>Continue shopping</a></div>
-                  <div class="col-md-6 text-md-end"><a class="btn btn-outline-dark btn-sm" href="checkout.blade.php">Procceed to checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></a></div>
+                  <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-link p-0 text-dark btn-sm" href="{{route('shop')}}"><i class="fas fa-long-arrow-alt-left me-2"> </i>Continue shopping</a></div>
+                  <div class="col-md-6 text-md-end"><a class="btn btn-outline-dark btn-sm" href="{{route('checkout')}}">Procceed to checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></a></div>
                 </div>
               </div>
             </div>
