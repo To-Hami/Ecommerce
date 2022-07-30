@@ -10,6 +10,9 @@
  *
  *  {{request()->routeIs('detail')?' bg-light':null}}****/
 
+/**************** to remove pachage  ******************/
+/*  npm remove laravel-mix
+
 
 
 
