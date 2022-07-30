@@ -14,5 +14,10 @@
 /*  npm remove laravel-mix
 
 
+/**************  to install again  *************************/
+
+  /***   npm install laravel-mix --save-dev
+
+
 
 
